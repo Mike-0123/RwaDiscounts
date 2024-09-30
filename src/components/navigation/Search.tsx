@@ -1,6 +1,6 @@
 import React from "react";
-import {Form, useSearchParams} from "react-router-dom";
-import { FaSearch as SearchIcon } from "react-icons/fa";
+import {useSearchParams} from "react-router-dom";
+import {FaSearch as SearchIcon} from "react-icons/fa";
 import {cn} from "../../utils/utils.ts";
 
 
@@ -8,7 +8,7 @@ const Search = React.forwardRef(({className}, ref) => {
     const [searchParams] = useSearchParams();
 
     return(
-        <Form ref={ref} action={"/products"} className="w-[520px] h-[42px] border border-primary-blue/50 rounded-s-md">
+        <form ref={ref} action={"/products"} className="w-[520px] h-[42px] border border-primary-blue/50 rounded-s-md">
             <div className={cn("flex items-center w-full h-full", className)}>
                 <input
                     type="text"
@@ -22,7 +22,7 @@ const Search = React.forwardRef(({className}, ref) => {
                     <SearchIcon/>
                 </button>
             </div>
-        </Form>
+        </form>
     )
 })
 
