@@ -21,7 +21,7 @@ const Trending = ({count=8}: {count?:number}) => {
                             .map((_, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <ProductCard key={idx} className={""}/>
+                                        <ProductCard key={idx}/>
                                     </li>
                                 )
                             })
