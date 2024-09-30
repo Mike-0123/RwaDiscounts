@@ -3,7 +3,7 @@ const categories = ["Computers and Accessories", "Phones and Tablets", "Electron
 
 const Categories = () => {
     return(
-        <div className="bg-primary-blue text-white hidden xl:block">
+        <div className="bg-primary-blue text-white hidden xl:block p-2">
             <div className="container mx-auto px-4">
                 <ul className={"flex items-center justify-between py-3 cursor-pointer capitalize"}>
                     {
