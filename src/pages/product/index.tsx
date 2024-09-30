@@ -1,17 +1,14 @@
-import {Link, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Container from "../../components/Container.tsx";
 import {BiStore as StoreIcon} from "react-icons/bi";
 import {TiStarFullOutline as StarIcon} from "react-icons/ti";
 import laptop from "../../assets/images/laptop.png";
-import { FaFacebook as Facebook } from "react-icons/fa";
-import { FaSquareXTwitter as Twitter } from "react-icons/fa6";
-import { FaSquareWhatsapp as Whatsapp } from "react-icons/fa6";
+import {FaFacebook as Facebook} from "react-icons/fa";
+import {FaSquareWhatsapp as Whatsapp, FaSquareXTwitter as Twitter} from "react-icons/fa6";
 import Trending from "../home/Trending.tsx";
 
 
 const Product = () => {
-    const params = useParams();
-    const {productId} = params;
     return(
         <div className="py-10">
             <Container>

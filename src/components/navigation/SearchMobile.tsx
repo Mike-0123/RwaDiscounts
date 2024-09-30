@@ -1,5 +1,4 @@
 import {FaSearch as SearchIcon} from "react-icons/fa";
-import React from "react";
 import Container from "../Container.tsx";
 
 const SearchMobile = () => {

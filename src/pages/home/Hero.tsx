@@ -7,19 +7,9 @@ import Siwper3 from "../../assets/images/swiper3.png"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import AdCard from "../../components/AdCard.tsx";
-import { useEffect } from "react";
-import API from "../../utils/API.ts";
 
 const Hero = () => {
-    useEffect( ()=>{
-        const fetchData= async ()=>{
-       const t =await API.get("/");
-     console.log("gghuyeuebebrninrrrrrrrrrrrrrrrrrrr",t)
-     const logIn = await API.post("/")//endpont and passing the link 
-        }
-        fetchData();
-    },[])
+
     return(
         <div className="container mx-auto px-4">
             <div className="grid xl:grid-cols-3 grid-cols-1 grid-rows-2 xl:grid-rows-1 gap-y-5 xl:gap-5 h-[21.25rem] lg:h-[28rem]">
