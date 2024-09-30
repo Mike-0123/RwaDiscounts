@@ -5,7 +5,7 @@ import {cn} from "../../utils/utils.ts";
 
 
 interface SearchProps  {
-    className: string
+    className?: string
 }
 
 const Search = React.forwardRef<HTMLFormElement, SearchProps>(({className}, ref) => {
