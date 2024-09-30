@@ -4,7 +4,11 @@ import {FaSearch as SearchIcon} from "react-icons/fa";
 import {cn} from "../../utils/utils.ts";
 
 
-const Search = React.forwardRef(({className}, ref) => {
+interface SearchProps  {
+    className: string
+}
+
+const Search = React.forwardRef<HTMLFormElement, SearchProps>(({className}, ref) => {
     const [searchParams] = useSearchParams();
 
     return(
