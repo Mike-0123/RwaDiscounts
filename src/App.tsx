@@ -3,6 +3,7 @@ import Index from "./pages";
 import "./App.css"
 import Home from "./pages/home";
 import Product from "./pages/product";
+import SellOnRwaDis from "./pages/Sell/SellOnRwaDis";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,9 @@ const router = createBrowserRouter([
             {
                 path: "/product/:productId",
                 element: <Product />
+            }, {
+                path: "/sell-on-rwaDiscounts",
+                element: <SellOnRwaDis />
             }
         ]
     }

@@ -24,7 +24,7 @@ const Navigation = () => {
                         <div className="items-center gap-5 hidden xl:inline-flex">
                             <div className="flex gap-3">
                                 <Link to={""}>Store Location</Link>
-                                <Link to={""}>Sell on RwaDiscounts</Link>
+                                <Link to={"/sell-on-rwaDiscounts"}>Sell on RwaDiscounts</Link>
                             </div>
                             <Search/>
                         </div>
