@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuList from '@mui/material/MenuList';
 import MyStorePage from './MyStore';
-import ProductsPage from './Products';
+import ProductsPage from './ProductsPage';
 import OrderPage from './Orders';
 
 
