@@ -9,7 +9,11 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuList from '@mui/material/MenuList';
 import MyStorePage from './MyStore';
+<<<<<<< HEAD
 import ProductsPage from './Products';
+=======
+import ProductsPage from './ProductsPage';
+>>>>>>> 4ec1487e5731d4e48da2084587129269f4f197ec
 import OrderPage from './Orders';
 
 
