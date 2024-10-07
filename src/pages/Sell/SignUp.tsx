@@ -1,4 +1,5 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignUp: React.FC = () => {
   const [storeName, setStoreName] = useState<string>('');
@@ -233,9 +234,9 @@ const SignUp: React.FC = () => {
         </button>
         <p className="text-gray-700 mt-4">
           Already have an account?{' '}
-          <a href="#" className="text-blue-500">
+          <Link to='/login' className="text-blue-500">
             Sign in here!
-          </a>
+          </Link>
         </p>
       </form>
     </div>

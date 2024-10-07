@@ -7,6 +7,8 @@ import SellOnRwaDis from "./pages/Sell/SellOnRwaDis";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Navigation from "./components/navigation";
 import Footer from "./components/Footer";
+import LoginForm from "./pages/Sell/Login";
+import ForgotPasswordForm from "./pages/Sell/ForgotPassword";
 
 const MainLayout: React.FC = () => (
   <>
@@ -32,6 +34,12 @@ const router = createBrowserRouter([
       {
         path: "sell-on-rwaDiscounts",
         element: <SellOnRwaDis />,
+      }, {
+        path: "/login",
+        element: <LoginForm/>,
+      }, {
+        path: "login/forgotPassword",
+        element: <ForgotPasswordForm/>,
       },
     ],
   },
