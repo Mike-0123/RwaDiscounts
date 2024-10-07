@@ -8,8 +8,13 @@ import Image6 from "../../assets/safe.png";
 import Electronics from '../../assets/electronics.png'
 import Card from "./Card";
 import { FaRegCommentDots } from "react-icons/fa";
-function SellOnRwaDis() {
+import SignUp from "./SignUp";
+import { useState } from "react";
+function SellOnRwaDis() {  
+  const [signupForm, SetSignupForm] = useState<boolean>(false);
+
   return (
+    <div className="">
     <div className="px-7 font-extralight pb-10">
       <div className="w-full flex flex-col mb-10">
         <div className=" text-[#022b5f] text-[20px] md:text-[22px]  font-bold">
@@ -33,7 +38,7 @@ function SellOnRwaDis() {
             Grow your business onlineReach millions of buyers in every state in
             Nigeria easily, get your store on Konga today!
           </div>
-          <button className="px-5 py-3 text-[#ec2cb6] border-[1.5px] border-[#ec2cb6] rounded-[6px] font-bold text-[17px] mt-7"> Register Now</button>
+          <button onClick={()=>SetSignupForm(true)} className="px-5 py-3 text-[#ec2cb6] border-[1.5px] border-[#ec2cb6] rounded-[6px] font-bold text-[17px] mt-7"> Register Now</button>
           </div>
       </div>
 
@@ -76,12 +81,24 @@ function SellOnRwaDis() {
         <div className="font-bold text-[22px] text-[#022b5f]">
         Earn Money, Hassle Free
         </div>
-        <button className="px-5 py-3 text-[#ec2cb6] border-[1.5px] border-[#ec2cb6] rounded-[6px] font-bold text-[17px] mt-7"> Register Now</button>
+        <button onClick={()=>SetSignupForm(true)} className="px-5 py-3 text-[#ec2cb6] border-[1.5px] border-[#ec2cb6] rounded-[6px] font-bold text-[17px] mt-7"> Register Now</button>
         <img src={Electronics} alt="Electronics" className="absolute top-10 right-10" />
       </div>
       <div className="fixed  w-20 h-20 bottom-8 right-8 rounded-full bg-[rgba(242,43,162,0.3)] flex justify-center items-center hover:cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 ">
       <FaRegCommentDots className="text-[65px] text-[rgb(242,43,162)]" />
       </div>
+    </div>
+    {signupForm && (<div className="fixed top-0 left-0 bg-[rgba(0,0,0,0.6)] w-screen h-screen flex justify-center  overflow-auto"
+                onClick={() => SetSignupForm(false)}
+      >
+        <div
+          className="bg-white min-w-[50%] rounded-md shadow-lg "
+          onClick={(e) => e.stopPropagation()}
+        >
+          <SignUp />
+        </div>
+      </div>
+    )}
     </div>
   );
 }
