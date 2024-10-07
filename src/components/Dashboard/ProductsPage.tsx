@@ -1,8 +1,13 @@
 import React from 'react';
-import { Home, Store, Package, ShoppingCart, Menu, ChevronDown, Plus } from 'lucide-react';
+import {  Plus } from 'lucide-react';
+import ProductForm from './AddProduct';
 
-const ProductsPage: React.FC = () => (
-  <div className="flex h-screen bg-gray-100">
+const ProductsPage: React.FC = () => {
+  const [productForm, setProductForm]=React.useState('productsPage');
+
+  return(
+  <>
+  { productForm === 'productsPage' &&(<div className="flex h-screen bg-gray-100">
     
     <div className="flex-1 flex flex-col">      
       <main className="flex-1 p-6">
@@ -15,7 +20,7 @@ const ProductsPage: React.FC = () => (
           </div>
         </div>
         
-        <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 mb-4 hover:bg-indigo-700 transition duration-300">
+        <button onClick={()=>setProductForm('addProduct')} className="bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 mb-4 hover:bg-indigo-700 transition duration-300">
           <Plus size={20} />
           <span>Add Product</span>
         </button>
@@ -62,7 +67,13 @@ const ProductsPage: React.FC = () => (
         </div>
       </main>
     </div>
-  </div>
+  </div>)}
+  {
+    productForm ==='addProduct' &&(
+      <ProductForm/>
+    )
+  }
+  </>
 );
-
+}
 export default ProductsPage;

@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
   return (
     <div className="flex h-screen bg-[#f3f4f9]">
       {/* Sidebar */}
-      <div className="bg-[#1e2139] text-white w-64 h-screen p-6">
+      <div className="bg-[#1e2139] text-white w-64 h-screen p-6 fixed top-0 left-0">
         <h1 className="text-2xl font-bold mb-10 text-[#5a67d8]">Rwa Discounts</h1>
         <nav>
           <p className="text-gray-400 text-xs uppercase tracking-wider mb-4">Dashboard</p>
@@ -81,9 +81,9 @@ const Dashboard: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col ml-64">
         {/* Header */}
-        <div className="bg-white shadow-sm p-4 flex justify-between items-center">
+        <div className="bg-white shadow-sm p-4 flex justify-between items-center sticky top-0 left-64 ">
           <MdMenu size={24} className="text-gray-500 cursor-pointer" />
           <div className="flex items-center space-x-2">
             <Button
